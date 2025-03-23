@@ -1,0 +1,31 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="notification_indicator_corner">50dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="smallsubheading_text_size">14dp</dimen>
+    <dimen name="heading_text_size">18dp</dimen>
+    <dimen name="subheading_text_size">16dp</dimen>
+    <dimen name="switch_text_size">18dp</dimen>
+    <dimen name="card_img_size">100dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="card_stroke_radious">2dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="add_img_size">130dp</dimen>
+    <dimen name="switch_button_thumbsize">26dp</dimen>
+    <dimen name="switch_button_tracksize">26dp</dimen>
+    <dimen name="color_card">90dp</dimen>
+    <dimen name="alert_icon_size">100dp</dimen>
+    <dimen name="slider_size">250dp</dimen>
+    <dimen name="margin_25dp">25dp</dimen>
+    <dimen name="margin_2dp">2dp</dimen>
+    <dimen name="profile_stroke_radious">4dp</dimen>
+    <dimen name="seprate_line">2dp</dimen>
+    <dimen name="search_icon_size">80dp</dimen>
+
+
+</resources>
