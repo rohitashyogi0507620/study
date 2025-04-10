@@ -26,4 +26,10 @@
     <string name="privecy_information">Privacy policy</string>
     <string name="aboutUs">About Us</string>
     <string name="version">Version</string>
+    <string name="previousQuestion">Previous</string>
+    <string name="nextQuestion">Next</string>
+    <string name="QuestionAttanded">Question Attanded</string>
+    <string name="totalQuestion">Total Question</string>
+    <string name="correct">Correct</string>
+    <string name="wrong">Wrong</string>
 </resources>

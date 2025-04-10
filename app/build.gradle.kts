@@ -1,9 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.google.devtools.ksp)
-    id("kotlin-parcelize")
-
+    alias(libs.plugins.kotlinAndroidKsp)
+    alias(libs.plugins.hiltAndroid)
 }
 
 android {
@@ -24,18 +23,19 @@ android {
         release {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
             )
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_18
+        targetCompatibility = JavaVersion.VERSION_18
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
+        kotlinOptions {
+            jvmTarget = "18"
     }
+
+
     buildFeatures {
         viewBinding = true
     }
@@ -54,12 +54,10 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
 
 
-    //Dagger - Hilt
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.android.compiler)
     //Hilt Worker
+    implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.work)
-    ksp(libs.androidx.hilt.compiler)
+    ksp(libs.hilt.compiler)
 
 
     // Glide
@@ -88,8 +86,8 @@ dependencies {
 
     //Room Database
     implementation(libs.androidx.room.runtime)
+    implementation(libs.room.ktx)
     ksp(libs.room.compiler)
-    annotationProcessor(libs.room.compiler)
 
     //Worker
     implementation(libs.androidx.work.runtime.ktx)

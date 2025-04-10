@@ -1,4 +1,4 @@
-package com.yogify.birthdayreminder.common
+package com.yogify.study.ui.common
 
 import android.content.BroadcastReceiver
 import android.content.Context

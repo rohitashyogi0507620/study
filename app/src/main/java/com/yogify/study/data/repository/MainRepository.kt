@@ -73,7 +73,7 @@ class MainRepository @Inject constructor(
         var listdata = mutableListOf<ReminderItem>()
         getReminderList().forEachIndexed { index, it ->
             var calendar = Calendar.getInstance(Locale.US)
-            calendar.timeInMillis = it.date
+          //  calendar.timeInMillis = it.date
 
             val nextTrigger = Calendar.getInstance().apply {
                 timeInMillis = currentTimeMillis
@@ -91,48 +91,12 @@ class MainRepository @Inject constructor(
                 listdata.add(it)
             }
         }
-        nextreminderItem = listdata.minWithOrNull(Comparator.comparingLong { it.date })
+      //  nextreminderItem = listdata.minWithOrNull(Comparator.comparingLong { it.date })
         Log.d("LATESTITEM", nextreminderItem.toString())
         return nextreminderItem
 
     }
 
-    fun backupDatabase(context: Context): Int {
-        var result = -99
-        if (instance == null) return result
-        val dbFile = context.getDatabasePath(REMINDER_DATABASE)
-        val backupFile = File(databasePath(context))
-        Log.d("PATH", dbFile.path.toString())
-        Log.d("PATH", backupFile.path.toString())
-        if (backupFile.exists()) backupFile.delete()
-        checkpoint()
-        try {
-            dbFile.copyTo(backupFile, true)
-            result = 0
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-        return result
-    }
-
-    fun restoreDatabase(context: Context, restart: Boolean = true) {
-        val backupFile = File(databasePath(context))
-        if (backupFile.exists()) {
-            if (instance == null) return
-            val dbpath = appDatabase.openHelper.readableDatabase.path
-            val dbFile = File(dbpath)
-            try {
-                backupFile.copyTo(dbFile, true)
-                checkpoint()
-                val i = context.packageManager.getLaunchIntentForPackage(context.packageName)
-                i!!.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                context.startActivity(i)
-                System.exit(0)
-            } catch (e: IOException) {
-                e.printStackTrace()
-            }
-        }
-    }
 
     private fun checkpoint() {
         var db = appDatabase.openHelper.writableDatabase

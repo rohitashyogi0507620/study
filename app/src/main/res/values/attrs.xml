@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="HeadingRegistrationLayout">
+        <attr name="headingtext" format="string" />
+        <attr name="subheadingtext" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="HeadingWithFixChipLayout">
+        <attr name="title" format="string" />
+        <attr name="subtitle" format="string" />
+        <attr name="ischecked" format="boolean" />
+        <attr name="isCustomChip" format="boolean" />
+        <attr name="chip1Text" format="string" />
+        <attr name="chip2Text" format="string" />
+        <attr name="withoutchip" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="HeadingWithCustomChipLayout">
+        <attr name="headingtitle" format="string" />
+        <attr name="subheadingtitle" format="string" />
+    </declare-styleable>
+
+    <attr name="my_enum_attr">
+        <enum name="value1" value="1" />
+    </attr>
+
+    <declare-styleable name="ButtonRound">
+        <attr name="isactive" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ProgessLayout">
+        <attr name="showprogess" format="boolean" />
+        <attr name="animationfile" format="reference" />
+        <attr name="progessbackground" format="color" />
+        <attr name="containlayoutenable" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ButtonFlat">
+        <attr name="isactiveflatbutton" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="EditTextInput">
+        <attr name="showError" format="boolean" />
+        <attr name="errorMessage" format="string" />
+        <attr name="errorIcon" format="reference" />
+    </declare-styleable>
+
+    <attr name="customColorEnable" format="boolean" />
+    <attr name="customColor" format="color" />
+
+    <declare-styleable name="TextViewSubHeadingSmall">
+        <attr name="customColorEnable" />
+        <attr name="customColor" />
+    </declare-styleable>
+
+    <declare-styleable name="TextViewSubHeadingLight">
+        <attr name="customColorEnable" />
+        <attr name="customColor" />
+    </declare-styleable>
+
+    <declare-styleable name="TextViewLargeHeading">
+        <attr name="customColorEnable" />
+        <attr name="customColor" />
+    </declare-styleable>
+
+    <declare-styleable name="TextViewMediumHeading">
+        <attr name="customColorEnable" />
+        <attr name="customColor" />
+    </declare-styleable>
+
+
+    <declare-styleable name="TextViewSubHeadingLarge">
+        <attr name="customColorEnable" />
+        <attr name="customColor" />
+    </declare-styleable>
+
+    <declare-styleable name="TextViewSmallHeading">
+        <attr name="customColorEnable" />
+        <attr name="customColor" />
+    </declare-styleable>
+
+    <declare-styleable name="TextViewReviewHeading">
+        <attr name="customColorEnable" />
+        <attr name="customColor" />
+    </declare-styleable>
+    <declare-styleable name="TextViewReviewData">
+        <attr name="customColorEnable" />
+        <attr name="customColor" />
+    </declare-styleable>
+
+
+</resources>

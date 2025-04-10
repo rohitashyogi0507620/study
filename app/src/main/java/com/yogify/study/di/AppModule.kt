@@ -1,14 +1,14 @@
-package com.yogify.birthdayreminder.di
+package com.yogify.study.di
 
 import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.yogify.birthdayreminder.common.ReminderAlarmManager
-import com.yogify.birthdayreminder.common.ReminderNotificationManager
 import com.yogify.study.data.db.AppDatabase
 import com.yogify.study.data.db.DataBaseConstant.REMINDER_DATABASE
 import com.yogify.study.data.db.DataDAO
 import com.yogify.study.data.repository.MainRepository
+import com.yogify.study.ui.common.ReminderAlarmManager
+import com.yogify.study.ui.common.ReminderNotificationManager
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

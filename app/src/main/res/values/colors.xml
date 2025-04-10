@@ -38,6 +38,7 @@
     <color name="switch_off_color">#D9DEEA</color>
     <color name="colorIcon">#2D264B</color>
     <color name="coloroptionbackground">#EDEDED</color>
+    <color name="transparent">#00FFFFFF</color>
 
 
     <string-array name="colorThemeLight">
@@ -73,5 +74,20 @@
         <item name="colortheme12_12">#9F9E9E</item>
     </string-array>
 
+
+    <color name="colorResultCompletion">#4FC3F7</color>
+    <color name="colorTotalQuestion">#BA68C8</color>
+    <color name="colorResultHeading">#1F1F1F</color>
+    <color name="colorCorrectQuestion">#5EDB64</color>
+    <color name="colorCorrectQuestionNon">#D6FFD8</color>
+    <color name="colorWrongQuestion">#FD4444</color>
+    <color name="colorWrongQuestionNon">#FFD6D6</color>
+    <color name="colorProgressNon">#CAECFB</color>
+    <color name="color_progress_track">#FDE1E6</color>
+    <color name="color_progress_indicator">@color/colorCorrectQuestion</color>
+    <color name="colorPrimary">#89D8FC</color>
+    <color name="background">#66EFF7FF</color>
+    <color name="colorError">#FFA09A</color>
+    <color name="background_progess">#D9D9D9</color>
 
 </resources>

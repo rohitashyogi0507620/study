@@ -1,9 +1,7 @@
-package com.yogify.birthdayreminder.common
+package com.yogify.study.ui.common
 
 import android.content.Context
 import android.content.Intent
-import com.yogify.birthdayreminder.util.utils.Companion.REMINDERITEM
-import com.yogify.birthdayreminder.util.utils.Companion.stringToReminderDataObject
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -19,7 +17,7 @@ class ReminderReceiver : BaseBroadcastReceiver() {
         super.onReceive(context, intent)
         if (intent.action == null) return
         if (intent.action == ReminderNotificationManager.ACTION_NOTIFY) {
-            reminderNotificationManager.notifyReminder(stringToReminderDataObject(intent.getStringExtra(REMINDERITEM)!!)!!)
+          //  reminderNotificationManager.notifyReminder(stringToReminderDataObject(intent.getStringExtra(REMINDERITEM)!!)!!)
             remindMeAlarmManager.nextReminder()
         }
     }

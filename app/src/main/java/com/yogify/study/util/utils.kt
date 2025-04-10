@@ -24,7 +24,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.app.ActivityCompat
-import com.yogify.study.model.ThemeColor
 import com.airbnb.lottie.LottieAnimationView
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
@@ -151,17 +150,17 @@ class utils {
             Snackbar.make(view, text, Snackbar.LENGTH_LONG).show()
         }
 
-        fun colorTheme(context: Context): ArrayList<ThemeColor> {
-
-            var themeColor = arrayListOf<ThemeColor>()
-            var colorLight = context.getResources().getStringArray(R.array.colorThemeLight)
-            var colorDark = context.getResources().getStringArray(R.array.colorThemeDark)
-
-            colorLight.forEachIndexed { index, s ->
-                themeColor.add(ThemeColor(colorLight.get(index), colorDark.get(index)))
-            }
-            return themeColor
-        }
+//        fun colorTheme(context: Context): ArrayList<ThemeColor> {
+//
+//            var themeColor = arrayListOf<ThemeColor>()
+//            var colorLight = context.getResources().getStringArray(R.array.colorThemeLight)
+//            var colorDark = context.getResources().getStringArray(R.array.colorThemeDark)
+//
+//            colorLight.forEachIndexed { index, s ->
+//                themeColor.add(ThemeColor(colorLight.get(index), colorDark.get(index)))
+//            }
+//            return themeColor
+//        }
 
 
         fun checkNotificationPermission(context: Context): Boolean {

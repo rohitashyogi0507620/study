@@ -174,6 +174,48 @@
     </style>
 
 
+    <style name="shadow_style">
+        <item name="android:background">@color/white</item>
+        <item name="android:elevation">@dimen/margin_10dp</item>
+        <item name="android:padding">@dimen/border_2dp</item>
+    </style>
+
+    <style name="navbar_style">
+        <item name="android:background">@color/white</item>
+        <item name="android:elevation">@dimen/margin_10dp</item>
+        <item name="android:padding">@dimen/border_2dp</item>
+    </style>
+
+
+    <style name="round_image" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="round_profileimage" parent="">
+        <item name="cornerSize">25%</item>
+    </style>
+
+    <style name="Card_View_Style">
+        <item name="cardCornerRadius">@dimen/margin_10dp</item>
+        <item name="cardElevation">@dimen/button_corner_8dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="Card_View_Style_Small">
+        <item name="cardCornerRadius">@dimen/margin_10dp</item>
+        <item name="cardElevation">@dimen/margin_5dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+    <style name="barGrapButtons">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/margin_12dp</item>
+        <item name="android:gravity">center|center_horizontal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">@dimen/margin_5dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginLeft">1dp</item>
+    </style>
+
     <dimen name="cardview_corner">15dp</dimen>
     <dimen name="cardview_elevation">6dp</dimen>
     <dimen name="border_1dp">1dp</dimen>

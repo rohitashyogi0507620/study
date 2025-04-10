@@ -1,4 +1,4 @@
-package com.yogify.birthdayreminder.common
+package com.yogify.study.ui.common
 
 import android.annotation.SuppressLint
 import android.app.AlarmManager
@@ -7,9 +7,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.util.Log
-import com.yogify.birthdayreminder.common.ReminderNotificationManager.Companion.ACTION_NOTIFY
 import com.yogify.study.data.repository.MainRepository
 import com.yogify.study.model.ReminderItem
+import com.yogify.study.ui.common.ReminderNotificationManager.Companion.ACTION_NOTIFY
 import com.yogify.study.util.utils
 import com.yogify.study.util.utils.Companion.REMINDERITEM
 import java.util.Calendar
@@ -24,7 +24,8 @@ class ReminderAlarmManager @Inject constructor(
     private fun getPendingIntent(reminder: ReminderItem): PendingIntent {
         return PendingIntent.getBroadcast(
             context,
-            reminder.id,
+//            reminder.id,
+            12,
             Intent(context, ReminderReceiver::class.java).apply {
                 action = ACTION_NOTIFY
                 putExtra(REMINDERITEM, utils.reminderDataObjectToString(reminder))
@@ -38,7 +39,8 @@ class ReminderAlarmManager @Inject constructor(
     private fun isPendingIntentExists(reminder: ReminderItem): PendingIntent? {
         return PendingIntent.getBroadcast(
             context,
-            reminder.id,
+//            reminder.id,
+            12,
             Intent(context, ReminderReceiver::class.java).apply {
                 action = ACTION_NOTIFY
                 putExtra(REMINDERITEM, utils.reminderDataObjectToString(reminder))
@@ -61,7 +63,7 @@ class ReminderAlarmManager @Inject constructor(
     fun validateAndStart(reminder: ReminderItem) {
 
         var calendar = Calendar.getInstance()
-        calendar.timeInMillis = reminder.date
+        //calendar.timeInMillis = reminder.date
 
         val nextTrigger = Calendar.getInstance().apply {
             timeInMillis = System.currentTimeMillis()

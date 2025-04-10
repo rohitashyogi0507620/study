@@ -4,7 +4,7 @@ import android.app.Application
 import android.os.Build
 import androidx.hilt.work.HiltWorkerFactory
 import androidx.work.Configuration
-import com.yogify.birthdayreminder.common.ReminderNotificationManager
+import com.yogify.study.ui.common.ReminderNotificationManager
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 

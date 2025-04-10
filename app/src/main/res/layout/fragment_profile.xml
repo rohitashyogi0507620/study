@@ -61,7 +61,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="80dp"
-                    android:background="@color/zxing_transparent">
+                    android:background="@color/transparent">
 
 
                     <RelativeLayout
@@ -99,7 +99,7 @@
                                             android:backgroundTint="?colorOnPrimary"
                                             android:gravity="start"
                                             android:text="@string/userprofile"
-                                            android:textColor="?colorOnPrimary" />
+                                             />
 
                                         <TextView
                                             android:layout_width="wrap_content"
@@ -280,7 +280,7 @@
                             android:backgroundTint="?colorOnPrimary"
                             android:gravity="start"
                             android:text="@string/aboutUs"
-                            android:textColor="?colorOnPrimary" />
+                            />
 
                         <LinearLayout
                             android:id="@+id/st_ll_rating"

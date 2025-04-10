@@ -1,4 +1,4 @@
-package com.yogify.birthdayreminder.common
+package com.yogify.study.ui.common
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -20,6 +20,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import com.yogify.birthdayreminder.common.ReminderActionReceiver
 import com.yogify.study.MainActivity
 import com.yogify.study.R
 import com.yogify.study.model.ReminderItem
@@ -63,31 +64,31 @@ class ReminderNotificationManager @Inject constructor(val context: Context) {
 
     fun notifyReminder(reminderItem: ReminderItem) {
 
-        Glide.with(context).asBitmap().load(reminderItem.imageUriPath).error(R.drawable.ic_launcher_foreground)
-            .centerCrop()
-            .diskCacheStrategy(DiskCacheStrategy.NONE).listener(object : RequestListener<Bitmap?> {
-                override fun onLoadFailed(
-                    e: GlideException?,
-                    model: Any?,
-                    target: Target<Bitmap?>,
-                    isFirstResource: Boolean
-                ): Boolean {
-                    showNotification(context, reminderItem, null)
-                    return false
-                }
-
-                override fun onResourceReady(
-                    resource: Bitmap,
-                    model: Any,
-                    target: Target<Bitmap?>?,
-                    dataSource: DataSource,
-                    isFirstResource: Boolean
-                ): Boolean {
-                    showNotification(context, reminderItem, resource)
-                    return true
-                }
-
-            }).submit()
+//        Glide.with(context).asBitmap().load(reminderItem.imageUriPath).error(R.drawable.ic_launcher_foreground)
+//            .centerCrop()
+//            .diskCacheStrategy(DiskCacheStrategy.NONE).listener(object : RequestListener<Bitmap?> {
+//                override fun onLoadFailed(
+//                    e: GlideException?,
+//                    model: Any?,
+//                    target: Target<Bitmap?>,
+//                    isFirstResource: Boolean
+//                ): Boolean {
+//                    showNotification(context, reminderItem, null)
+//                    return false
+//                }
+//
+//                override fun onResourceReady(
+//                    resource: Bitmap,
+//                    model: Any,
+//                    target: Target<Bitmap?>?,
+//                    dataSource: DataSource,
+//                    isFirstResource: Boolean
+//                ): Boolean {
+//                    showNotification(context, reminderItem, resource)
+//                    return true
+//                }
+//
+//            }).submit()
 
 
     }
@@ -95,7 +96,7 @@ class ReminderNotificationManager @Inject constructor(val context: Context) {
     private fun getActionPendingIntent(reminder: ReminderItem, actionvalue: String): PendingIntent {
         return PendingIntent.getBroadcast(
             context,
-            reminder.id,
+            12,
             Intent(context, ReminderActionReceiver::class.java).apply {
                 action = actionvalue
                 putExtra(NOTIFICATION_ID, notifiId)
@@ -119,9 +120,9 @@ class ReminderNotificationManager @Inject constructor(val context: Context) {
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setContentTitle(reminderItem.name)
-            .setContentText(reminderItem.wish)
+           // .setContentText(reminderItem.wish)
             .setColorized(true)
-            .setColor(Color.parseColor(reminderItem.colorLight))
+           // .setColor(Color.parseColor(reminderItem.colorLight))
             .setContentIntent(pendingIntent)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
