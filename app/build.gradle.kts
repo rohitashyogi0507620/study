@@ -39,7 +39,11 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+
+
 }
+
 
 dependencies {
 
@@ -57,6 +61,7 @@ dependencies {
     //Hilt Worker
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.work)
+    implementation(libs.androidx.activity)
     ksp(libs.hilt.compiler)
 
 
@@ -98,6 +103,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // image slider
+    implementation(libs.android.image.slider)
+
 
 
 }

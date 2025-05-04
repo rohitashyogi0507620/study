@@ -90,4 +90,63 @@
     <color name="colorError">#FFA09A</color>
     <color name="background_progess">#D9D9D9</color>
 
+
+
+    <color name="colorIconBackground">#f3f4fe</color>
+    <color name="colorchatBackgroundComment">#E1FBE2</color>
+    <color name="colorchatBackgroundReply">#C7E7FA</color>
+    <color name="chatreopen">#42A5F5</color>
+    <color name="chatbackground">#F3F9FF</color>
+    <color name="chatnew">#EF5350</color>
+    <color name="chatresolved">#66BB6A</color>
+    <color name="chatactioncolor">#DDDDDD</color>
+    <color name="chatattachmentactioncolor">#FFFFFF</color>
+    <color name="colorpromaxmotor">#2563EB</color>
+    <color name="colorpromaxlife">#0EB5BF</color>
+    <color name="colorpromaxhealth">#DC2626</color>
+    <color name="colorpromaxsme">#9333EA</color>
+
+    <color name="colorpromaxmotortint">#EFF6FF</color>
+    <color name="colorpromaxlifetint">#F0FEFF</color>
+    <color name="colorpromaxhealthtint">#FEF2F2</color>
+    <color name="colorpromaxsmetint">#FAF5FF</color>
+    <color name="textdeactive">#FFD9AD</color>
+    <color name="textactive">#16A34A</color>
+    <color name="inuptfieddeactivecolor">#330C0C0C</color>
+    <color name="inuptfiedactivecolor">#0C0C0C</color>
+
+    <color name="whatsnewback1">#EFF6FF</color>
+    <color name="whatsnewback2">#FFF1E3</color>
+    <color name="whatsnewback3">#F0FFF0</color>
+    <color name="whatsnewback4">#FAF5FF</color>
+    <color name="whatsnewback5">#FEF2F2</color>
+    <color name="whatsnewback6">#F0FEFF</color>
+
+    <color name="whatsnewborder1">#9DCEFF</color>
+    <color name="whatsnewborder2">#FFCE9C</color>
+    <color name="whatsnewborder3">#A1FF9E</color>
+    <color name="whatsnewborder4">#F8A5A5</color>
+    <color name="whatsnewborder5">#94F8FF</color>
+    <color name="whatsnewborder6">#CF9EFF</color>
+
+
+    <color name="whatsnewtext1">#1484F4</color>
+    <color name="whatsnewtext2">#FF6A00</color>
+    <color name="whatsnewtext3">#27B123</color>
+    <color name="whatsnewtext4">#9333EA</color>
+    <color name="whatsnewtext5">#F84444</color>
+    <color name="whatsnewtext6">#00BBC9</color>
+    <color name="whatsnewest">#1484F4</color>
+    <color name="whatstrending">#FF860E</color>
+    <color name="populartxt1">#EE6600</color>
+    <color name="popularborder1">#FFC99E</color>
+    <color name="popularbackground1">#FFF5ED</color>
+    <color name="colorMirror">#F2FBFAFF</color>
+    <color name="insurance_sikho_color">#ECFCFF</color>
+    <color name="bottomnav_txtinactive">#101317</color>
+    <color name="graphLastmonthcolor">#C9D4FF</color>
+    <color name="graphThismonthcolor">#253B95</color>
+    <color name="onlinepolicycolor">#27B123</color>
+    <color name="offinepolicycolor">#F84444</color>
+
 </resources>

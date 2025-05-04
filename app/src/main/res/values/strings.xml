@@ -32,4 +32,11 @@
     <string name="totalQuestion">Total Question</string>
     <string name="correct">Correct</string>
     <string name="wrong">Wrong</string>
+    <string name="Test_series">Test series</string>
+    <string name="Quiz">Quiz</string>
+    <string name="Forgot_Password">Forgot Password?</string>
+    <string name="Donthavaccount">Don’t have an account? Sign Up</string>
+    <string name="enteremail">Phone Number</string>
+    <string name="entername">Enter Name</string>
+    <string name="signup">Sign Up</string>
 </resources>

@@ -1,22 +1,485 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/slider_banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_size_homescreen"
+        android:visibility="visible"
+        app:sliderAnimationDuration="1000"
+        app:sliderIndicatorAnimationDuration="1000"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMarginBottom="@dimen/margin_30dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderAutoCycleDirection="right"
+        app:sliderIndicatorSelectedColor="@color/colorPrimary"
+        app:sliderIndicatorUnselectedColor="@color/white"
+        app:sliderScrollTimeInSec="2"
+        app:sliderStartAutoCycle="true"
+        app:sliderAutoCycleEnabled="true"/>
+
+    <LinearLayout
+        android:layout_below="@id/slider_banner"
+        android:id="@+id/ll_whatsnew"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_5dp">
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/whatsnewCoinsCalculatory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_whatsnew_items"
+                android:backgroundTint="@color/whatsnewborder1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/background_whatsnew_items"
+                        android:backgroundTint="@color/white" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/border_1dp"
+                        android:background="@drawable/background_whatsnew_items"
+                        android:backgroundTint="@color/white">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/margin_5dp"
+                            android:background="@drawable/background_whatsnew_items"
+                            android:backgroundTint="@color/whatsnewback1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/whatsnewest"
+                                    android:padding="@dimen/margin_5dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/button_corner_8dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_5dp"
+                                android:orientation="vertical"
+                                android:padding="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/margin_5dp"
+                                    android:gravity="center"
+                                    />
+
+                                <TextView
+                                    style="@style/TextAppearance_heading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:lines="2"
+                                    android:maxLines="2"
+                                    android:text="@string/Test_series"
+                                    android:textColor="@color/whatsnewtext1"
+                                    android:textSize="@dimen/d12"
+                                    app:customColorEnable="true" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whatsnewPromaxLoyalty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_whatsnew_items"
+                android:backgroundTint="@color/whatsnewborder2"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/background_whatsnew_items"
+                        android:backgroundTint="@color/white" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/border_1dp"
+                        android:background="@drawable/background_whatsnew_items"
+                        android:backgroundTint="@color/white">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/margin_5dp"
+                            android:background="@drawable/background_whatsnew_items"
+                            android:backgroundTint="@color/whatsnewback2"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/whatstrending"
+                                    android:padding="@dimen/margin_5dp"
+                                    android:text="TRENDING"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/button_corner_8dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_5dp"
+                                android:orientation="vertical"
+                                android:padding="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/margin_5dp"
+                                    android:gravity="center"
+                                    />
+
+                                <TextView
+                                    style="@style/TextAppearance_subheading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:lines="2"
+                                    android:maxLines="2"
+                                    android:text="@string/Quiz"
+                                    android:textColor="@color/colorpromaxhealth"
+                                    android:textSize="@dimen/d12"
+                                    app:customColorEnable="true" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/whatsnewRenewals"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_whatsnew_items"
+                android:backgroundTint="@color/whatsnewborder4"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/background_whatsnew_items"
+                        android:backgroundTint="@color/white" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/border_1dp"
+                        android:background="@drawable/background_whatsnew_items"
+                        android:backgroundTint="@color/white">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/margin_5dp"
+                            android:background="@drawable/background_whatsnew_items"
+                            android:backgroundTint="@color/whatsnewback5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_5dp"
+                                android:orientation="vertical"
+                                android:padding="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/margin_5dp"
+                                    android:gravity="center"
+                                   />
+
+                                <TextView
+                                    style="@style/TextAppearance_subheading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:lines="2"
+                                    android:maxLines="2"
+                                    android:textColor="@color/whatsnewtext5"
+                                    android:textSize="@dimen/d12"
+                                    app:customColorEnable="true" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whatsnewCustomers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_whatsnew_items"
+                android:backgroundTint="@color/whatsnewborder5"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/background_whatsnew_items"
+                        android:backgroundTint="@color/white" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/border_1dp"
+                        android:background="@drawable/background_whatsnew_items"
+                        android:backgroundTint="@color/white">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/margin_5dp"
+                            android:background="@drawable/background_whatsnew_items"
+                            android:backgroundTint="@color/whatsnewback6"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_5dp"
+                                android:orientation="vertical"
+                                android:padding="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/margin_5dp"
+                                    android:gravity="center"
+                                   />
+
+                                <TextView
+                                    style="@style/TextAppearance_subheading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:lines="2"
+                                    android:maxLines="2"
+                                    android:textColor="@color/whatsnewtext6"
+                                    android:textSize="@dimen/d12"
+                                    app:customColorEnable="true" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/whatsnewOpportunities"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_whatsnew_items"
+                android:backgroundTint="@color/whatsnewborder6"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/background_whatsnew_items"
+                        android:backgroundTint="@color/white" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/border_1dp"
+                        android:background="@drawable/background_whatsnew_items"
+                        android:backgroundTint="@color/white">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/margin_5dp"
+                            android:background="@drawable/background_whatsnew_items"
+                            android:backgroundTint="@color/whatsnewback4"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_5dp"
+                                android:orientation="vertical"
+                                android:padding="@dimen/margin_10dp">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="@dimen/margin_5dp"
+                                    android:gravity="center"
+                                    />
+
+                                <TextView
+                                    style="@style/TextAppearance_subheading"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:lines="2"
+                                    android:maxLines="2"
+                                    android:textColor="@color/whatsnewtext4"
+                                    android:textSize="@dimen/d12"
+                                    app:customColorEnable="true" />
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

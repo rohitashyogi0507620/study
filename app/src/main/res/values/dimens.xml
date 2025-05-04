@@ -41,5 +41,8 @@
     <dimen name="home_item_size">60dp</dimen>
     <dimen name="progess_icon_size">150dp</dimen>
     <dimen name="d150">150dp</dimen>
+    <dimen name="banner_size_homescreen">250dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="d12">12dp</dimen>
 
 </resources>

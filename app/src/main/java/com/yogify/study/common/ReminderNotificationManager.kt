@@ -118,7 +118,7 @@ class ReminderNotificationManager @Inject constructor(val context: Context) {
             PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
 
         val notification = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setSmallIcon(R.drawable.ic_app_icon)
             .setContentTitle(reminderItem.name)
            // .setContentText(reminderItem.wish)
             .setColorized(true)

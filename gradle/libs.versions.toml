@@ -1,6 +1,7 @@
 [versions]
 activityKtx = "1.10.1"
 agp = "8.9.1"
+androidImageSlider = "1.4.0"
 compiler = "4.16.0"
 converterGson = "2.11.0"
 glide = "4.16.0"
@@ -29,8 +30,10 @@ workRuntimeKtx = "2.10.0"
 kspVersion = "2.0.10-1.0.24"
 hiltVersion = "2.56.1"
 hiltWork = "1.2.0"
+activity = "1.10.1"
 
 [libraries]
+android-image-slider = { module = "com.github.smarteist:Android-Image-Slider", version.ref = "androidImageSlider" }
 androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
@@ -61,6 +64,7 @@ androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "
 hilt-android = { group = "com.google.dagger", name = "hilt-android" , version.ref = "hiltVersion"}
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler" , version.ref = "hiltVersion"}
 androidx-hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltWork" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 
 
 [plugins]

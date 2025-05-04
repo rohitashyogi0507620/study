@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.yogify.study.databinding.FragmentHomeBinding
+import com.yogify.study.ui.home.adapter.BannerSliderAdapter
 
 class HomeFragment : Fragment() {
 
@@ -23,16 +25,23 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
+        val viewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+
+        viewModel.bannerHomeScreen.observe(viewLifecycleOwner) {
+            val adapter = BannerSliderAdapter(requireContext(), it)
+            binding.sliderBanner.setSliderAdapter(adapter)
+            binding.sliderBanner.setIndicatorAnimation(IndicatorAnimationType.WORM)
+            adapter.setOnItemClickListener { response ->
+            }
+
         }
+
+
         return root
     }
 
