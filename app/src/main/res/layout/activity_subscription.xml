@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.subscription.SubscriptionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardUnlimited"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/margin_20dp"
+            app:cardElevation="@dimen/margin_10dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="@dimen/margin_10dp"
+            app:state_dragged="true"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="@dimen/border_1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <com.yogify.study.ui.component.RadioButton
+                    style="@style/RadioButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    style="@style/TextAppearance_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:text="1 Month"
+                    android:textColor="@color/whatsnewtext1"
+                    android:textSize="18dp"
+                    app:customColorEnable="true" />
+
+                <TextView
+                    style="@style/TextAppearance_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:text="₹59"
+                    android:textColor="@color/whatsnewtext1"
+                    android:textSize="@dimen/margin_30dp"
+                    app:customColorEnable="true" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginButton"
+        style="@style/StyleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/Continue"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>
